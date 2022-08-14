@@ -7,7 +7,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 BRANCH = os.environ['GITHUB_REF'].split('refs/heads/')[-1]
 # Replace `<user>` before running this script
-DOWNLOAD_URL = 'https://github.com/<user>/MyDalamudPlugins/raw/{branch}/plugins/{plugin_name}/latest.zip'
+DOWNLOAD_URL = 'https://github.com/thakyZ/MyDalamudPlugins/raw/{branch}/plugins/{plugin_name}/latest.zip'
 
 DEFAULTS = {
     'IsHide': False,
@@ -56,11 +56,11 @@ def main():
 def extract_manifests():
     manifests = []
 
-    for dirpath, dirnames, filenames in os.walk('./plugins'):
+    for dirpath, dirnames, filenames in os.walk(os.path.join(os.path.dirname(os.path.realpath(__file__)),'plugins')):
         if len(filenames) == 0 or 'latest.zip' not in filenames:
             continue
-        plugin_name = dirpath.split('/')[-1]
-        latest_zip = f'{dirpath}/latest.zip'
+        plugin_name = dirpath.split(os.sep)[len(dirpath.split(os.sep)) - 1]
+        latest_zip = os.path.join(os.path.join(os.path.dirname(os.path.realpath(__file__)),'plugins'),plugin_name,'latest.zip')
         with ZipFile(latest_zip) as z:
             manifest = json.loads(z.read(f'{plugin_name}.json').decode('utf-8'))
             manifests.append(manifest)
