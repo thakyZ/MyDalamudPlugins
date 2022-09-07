@@ -1,22 +1,25 @@
 [
-    {
-        "Author": "Neko Boi Nick",
-        "Name": "Emote Command Complex",
-        "Punchline": "Complex custom emotes now with targets!",
-        "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-        "InternalName": "EmoteCmdComplex",
-        "AssemblyVersion": "1.0.1.0",
-        "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-        "ApplicableVersion": "any",
-        "DalamudApiLevel": 6,
-        "LoadPriority": 0,
-        "IconUrl": "https://raw.githubusercontent.com/thakyZ/EmoteCmdComplex-dalamud/main/Data/EmoteCmdComplex.png",
-        "DownloadLinkInstall": "https://github.com/thakyZ/MyDalamudPlugins/raw/main/plugins/EmoteCmdComplex/latest.zip",
-        "IsHide": false,
-        "IsTestingExclusive": false,
-        "DownloadLinkTesting": "https://github.com/thakyZ/MyDalamudPlugins/raw/main/plugins/EmoteCmdComplex/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/thakyZ/MyDalamudPlugins/raw/main/plugins/EmoteCmdComplex/latest.zip",
-        "DownloadCount": 0,
-        "LastUpdate": "1660483410"
-    }
+  {
+    "Author": "Neko Boi Nick",
+    "Name": "Emote Command Complex",
+    "Punchline": "Complex custom emotes now with targets!",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "InternalName": "EmoteCmdComplex",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Social"
+    ],
+    "DalamudApiVersion": 7,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/EmoteCmdComplex-dalamud/main/Data/EmoteCmdComplex.png",
+    "Changelog": "Updated to API 7",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.2.1",
+    "LastUpdated": 1662570174,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.1/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.1/latest.zip"
+  }
 ]
