@@ -1,22 +1,35 @@
-name: Regenerate PluginMaster
-on: 
+name: Generate Repo
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
   workflow_dispatch:
-  push:
+  repository_dispatch:
     branches:
-    - master
+      - main
+    types: [new-release]
+
 jobs:
   generate:
-    name: Regenerate PluginMaster
-    runs-on: ubuntu-latest
+    name: Generate Repo
+    runs-on: windows-2019
     steps:
-      - uses: actions/setup-python@v2
+      - name: Extract branch
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - uses: actions/checkout@v1
+      - name: Run Powershell Script
+        run: .\generate-repo.ps1
+      - name: Commit files
+        continue-on-error: true
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Regenerate Repo" -a
+      - name: Push changes
+        continue-on-error: true
+        uses: ad-m/github-push-action@master
         with:
-            python-version: '3.8'
-      - uses: actions/checkout@v2
-      - name: Generate PluginMaster
-        run: python generate_pluginmaster.py
-      - uses: EndBug/add-and-commit@v7
-        with:
-          author_name: GitHub Action
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: Regenerate PluginMaster
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.extracted_branch.outputs.branch }}
