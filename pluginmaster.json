@@ -11,7 +11,7 @@
       "Social"
     ],
     "DalamudApiVersion": 7,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/EmoteCmdComplex-dalamud/main/Data/EmoteCmdComplex.png",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/EmoteCmdComplex-dalamud/main/EmoteCmdComplex/images/EmoteCmdComplex.png",
     "Changelog": "Updated to API 7",
     "IsHide": "False",
     "IsTestingExclusive": "False",
