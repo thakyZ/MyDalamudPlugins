@@ -6,4 +6,11 @@
     "branch": "main",
     "configFolder": "EmoteCmdComplex"
   }
+  {
+    "username": "thakyZ",
+    "pluginName": "StartupPrograms",
+    "repo": "Dalamud-StartupPrograms",
+    "branch": "main",
+    "configFolder": "StartupPrograms"
+  }
 ]
