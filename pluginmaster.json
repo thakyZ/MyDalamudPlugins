@@ -17,9 +17,34 @@
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.2",
     "LastUpdated": 1662576143,
-    "DownloadCount": 7,
+    "DownloadCount": 9,
     "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.2/latest.zip",
     "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.2/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.2/latest.zip"
+  },
+  {
+    "Author": "Neko Boi Nick",
+    "Name": "Startup Programs",
+    "Punchline": "TeamCraft packet capture not working for you upon startup? Try this instead.",
+    "Description": "A program to start tools upon login or Dalamud startup.",
+    "InternalName": "StartupPrograms",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-StartupPrograms",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Startup",
+      "Tools",
+      "Delay"
+    ],
+    "DalamudApiVersion": 7,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/Dalamud-StartupPrograms/main/StartupPrograms/images/StartupPrograms.png",
+    "Changelog": "Updated to API 7",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.0.0",
+    "LastUpdated": 1666288761,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-StartupPrograms/releases/download/1.0.0.0/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-StartupPrograms/releases/download/1.0.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-StartupPrograms/releases/download/1.0.0.0/latest.zip"
   }
 ]
