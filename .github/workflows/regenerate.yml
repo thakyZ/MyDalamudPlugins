@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Extract branch
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         id: extract_branch
       - uses: actions/checkout@v1
       - name: Run Powershell Script
