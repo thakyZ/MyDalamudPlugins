@@ -4,5 +4,11 @@
     "Author": ["NekoBoiNick"],
     "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "ExtendedDescription": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis."
+  },
+  {
+    "InternalName": "ResetEnmityCommand",
+    "Author": ["NekoBoiNick","akira0245","maributt"],
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+    "ExtendedDescription": "Add a reset striking dummy enmity command."
   }
 ]
