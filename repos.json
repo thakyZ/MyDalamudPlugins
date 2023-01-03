@@ -5,5 +5,11 @@
     "repo": "EmoteCmdComplex-dalamud",
     "branch": "main",
     "configFolder": "EmoteCmdComplex"
+  },
+  {
+    "username": "thakyZ",
+    "pluginName": "ResetEnmityCommand",
+    "repo": "Dalamud-ResetEnmityCommand",
+    "branch": "master"
   }
 ]
