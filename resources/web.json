@@ -2,7 +2,7 @@
   {
     "InternalName": "EmoteCmdComplex",
     "Author": ["NekoBoiNick"],
-    "IconUrl": "https://github.com/thakyZ/MyDalamudPlugins/raw/main/resources/emotecmdcomplex.png",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "ExtendedDescription": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis."
   }
 ]
