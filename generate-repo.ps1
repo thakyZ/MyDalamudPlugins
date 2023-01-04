@@ -11,20 +11,20 @@ foreach ($plugin in $pluginList) {
   $configFolder = $plugin.configFolder
 
   # Fetch the release data from the Gibhub API
-  $data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)" }
-  $json = ConvertFrom-Json $data.content
+  $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)" })
+  $json = ($data.content | ConvertFrom-Json)
 
   # Get data from the api request.
   $count = $json.assets[0].download_count
   $assembly = $json.tag_name
-  
+
   $download = $json.assets[0].browser_download_url
   # Get timestamp for the release.
   $time = [Int](New-TimeSpan -Start (Get-Date "01/01/1970") -End ([DateTime]$json.published_at)).TotalSeconds
 
   # Get the config data from the repo.
-  $configData = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json"
-  $config = ConvertFrom-Json $configData.content
+  $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json")
+  $config = ($configData.content | ConvertFrom-Json)
 
   # Ensure that config is converted properly.
   if ($null -eq $config) {
@@ -48,7 +48,7 @@ foreach ($plugin in $pluginList) {
 }
 
 # Convert plugins to JSON
-$pluginJson = ConvertTo-Json $pluginsOut
+$pluginJson = ($pluginsOut | ConvertTo-Json)
 
 # Save repo to file
 Set-Content -Path "pluginmaster.json" -Value $pluginJson
