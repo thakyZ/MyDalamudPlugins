@@ -10,6 +10,7 @@
     "username": "thakyZ",
     "pluginName": "ResetEnmityCommand",
     "repo": "Dalamud-ResetEnmityCommand",
-    "branch": "master"
+    "branch": "master",
+    "configFolder": ""
   }
 ]
