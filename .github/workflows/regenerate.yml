@@ -9,6 +9,9 @@ on:
       - main
     types: [new-release]
 
+env:
+  PAM: ${{ secrets.PAM }}
+
 jobs:
   generate:
     name: Generate Repo
