@@ -11,7 +11,7 @@ foreach ($plugin in $pluginList) {
   $configFolder = $plugin.configFolder
 
   # Fetch the release data from the Gibhub API
-  $data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @( "authorization: Bearer" = "$($env:PAM)"
+  $data = Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @( "authorization: Bearer" = "$($env:PAM)" )
   $json = ConvertFrom-Json $data.content
 
   # Get data from the api request.
