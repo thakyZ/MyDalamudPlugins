@@ -24,7 +24,7 @@ foreach ($plugin in $pluginList) {
 
   # Get the config data from the repo.
   $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json")
-  $config = ($configData.content | ConvertFrom-Json)
+  $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
 
   # Ensure that config is converted properly.
   if ($null -eq $config) {
