@@ -15,12 +15,12 @@
     "Changelog": "Updated to API 8",
     "IsHide": "False",
     "IsTestingExclusive": "False",
-    "AssemblyVersion": "1.0.2.4",
-    "LastUpdated": 1673493438,
+    "AssemblyVersion": "1.0.2.5",
+    "LastUpdated": 1674049949,
     "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.4/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.4/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.4/latest.zip"
+    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.5/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.5/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.5/latest.zip"
   },
   {
     "Author": "akira0245",
