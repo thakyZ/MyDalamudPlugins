@@ -12,5 +12,12 @@
     "repo": "Dalamud-ResetEnmityCommand",
     "branch": "master",
     "configFolder": ""
+  },
+  {
+    "username": "thakyZ",
+    "pluginName": "HousingTimeoutReminder",
+    "repo": "Dalamud-HousingTimeoutReminder",
+    "branch": "main",
+    "configFolder": "HousingTimeoutReminder"
   }
 ]
