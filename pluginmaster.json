@@ -46,5 +46,26 @@
     "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.5/latest.zip",
     "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.5/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.5/latest.zip"
+  },
+  {
+    "Author": "Neko Boi Nick",
+    "Name": "Housing Timeout Reminder",
+    "Punchline": "Remind you to visit your house just incase you forgor.",
+    "Description": "A plugin to remind you about your house on FFXIV just incase you forgor to visit it.",
+    "InternalName": "HousingTimeoutReminder",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Utility"
+    ],
+    "Changelog": "Initial Release",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.1.0",
+    "LastUpdated": 1675031761,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.0/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.0/latest.zip"
   }
 ]
