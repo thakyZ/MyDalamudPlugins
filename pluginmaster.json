@@ -61,11 +61,11 @@
     "Changelog": "Initial Release",
     "IsHide": "False",
     "IsTestingExclusive": "False",
-    "AssemblyVersion": "1.0.1.6",
-    "LastUpdated": 1677040709,
+    "AssemblyVersion": "1.0.1.7",
+    "LastUpdated": 1677080857,
     "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.6/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.6/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.6/latest.zip"
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.7/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.7/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.7/latest.zip"
   }
 ]
