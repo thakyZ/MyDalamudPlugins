@@ -2,6 +2,8 @@ Import-Module -Name "powershell-yaml"
 
 $pluginsOut = @()
 
+$DalamudApiLevel = 8;
+
 $pluginList = Get-Content '.\repos.json' | ConvertFrom-Json
 
 # Function to exit with a specific code.
@@ -55,6 +57,10 @@ foreach ($plugin in $pluginList) {
   if ($null -eq $config) {
     Write-Error "Config for plugin $($plugin) is null!"
     Exit-WithCode -Code 1
+  }
+  
+  if ($null -eq ($config | Get-Member -Name "DalamudApiLevel")) {
+    $config | Add-Member -Name "DalamudApiLevel" -MemberType NoteProperty -Value $DalamudApiLevel
   }
 
   # Add additional properties to the config.
