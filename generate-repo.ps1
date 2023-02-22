@@ -1,6 +1,23 @@
+Import-Module -Name "powershell-yaml"
+
 $pluginsOut = @()
 
 $pluginList = Get-Content '.\repos.json' | ConvertFrom-Json
+
+# Function to exit with a specific code.
+function Exit-WithCode {
+  param(
+    [int]
+    $Code
+  )
+  $host.SetShouldExit($Code)
+  exit $Code
+}
+
+if ($null -eq $env:PAM) {
+  Write-Error "Auth Key is null!"
+  Exit-WithCode -Code 1
+}
 
 foreach ($plugin in $pluginList) {
   # Get values from the object
@@ -9,6 +26,8 @@ foreach ($plugin in $pluginList) {
   $branch = $plugin.branch
   $pluginName = $plugin.pluginName
   $configFolder = $plugin.configFolder
+  
+  Write-Host $pluginName
 
   # Fetch the release data from the Gibhub API
   $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)" })
@@ -23,13 +42,19 @@ foreach ($plugin in $pluginList) {
   $time = [Int](New-TimeSpan -Start (Get-Date "01/01/1970") -End ([DateTime]$json.published_at)).TotalSeconds
 
   # Get the config data from the repo.
-  $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json")
-  $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
+  $config = $null;
+  $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json" -SkipHttpErrorCheck -ErrorAction Continue)
+  if ($null -ne $configData -and $configData.BaseResponse.StatusCode -ne 404) {
+    $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
+  } else {
+    $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
+    $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml)
+  }
 
   # Ensure that config is converted properly.
   if ($null -eq $config) {
     Write-Error "Config for plugin $($plugin) is null!"
-    ExitWithCode(1)
+    Exit-WithCode -Code 1
   }
 
   # Add additional properties to the config.
@@ -52,9 +77,3 @@ $pluginJson = ($pluginsOut | ConvertTo-Json)
 
 # Save repo to file
 Set-Content -Path "pluginmaster.json" -Value $pluginJson
-
-# Function to exit with a specific code.
-function ExitWithCode($code) {
-  $host.SetShouldExit($code)
-  exit $code
-}

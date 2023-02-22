@@ -20,7 +20,9 @@ jobs:
         id: extract_branch
       - uses: actions/checkout@v1
       - name: Run Powershell Script
-        run: .\generate-repo.ps1
+        run: |
+          Install-Module -Name "powershell-yaml"
+          .\generate-repo.ps1
         env:
           PAM: ${{ secrets.PAM }}
       - name: Commit files
