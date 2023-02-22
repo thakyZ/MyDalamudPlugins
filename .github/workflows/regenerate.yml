@@ -19,10 +19,15 @@ jobs:
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         id: extract_branch
       - uses: actions/checkout@v1
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v5.2
+        with:
+          modules-to-cache: powershell-yaml
+        env:
+          PAM: ${{ secrets.PAM }}
       - name: Run Powershell Script
-        run: |
-          Install-Module -Name "powershell-yaml" -AcceptLicense -SkipPublisherCheck -Confirm;
-          .\generate-repo.ps1
+        shell: pwsh
+        run: .\generate-repo.ps1
         env:
           PAM: ${{ secrets.PAM }}
       - name: Commit files
