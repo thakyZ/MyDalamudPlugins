@@ -21,6 +21,16 @@ if ($null -eq $env:PAM) {
   Exit-WithCode -Code 1
 }
 
+function ConvertTo-PascalCase {
+  param(
+    [string]
+    $String
+  )
+  $Text = ($Var1 -Replace "[^0-9A-Z]", " ")
+  $Out = ((Get-Culture).TextInfo.ToTitleCase($Text) -Replace " ")
+  return $Out;
+}
+
 foreach ($plugin in $pluginList) {
   # Get values from the object
   $username = $plugin.username
@@ -50,7 +60,7 @@ foreach ($plugin in $pluginList) {
     $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
   } else {
     $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
-    $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml)
+    $config = (ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF') | ConvertFrom-Yaml)
   }
 
   # Ensure that config is converted properly.
