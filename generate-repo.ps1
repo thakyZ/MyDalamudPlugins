@@ -23,12 +23,21 @@ if ($null -eq $env:PAM) {
 
 function ConvertTo-PascalCase {
   param(
-    [string]
-    $String
+    [System.Object]
+    $Data
   )
-  $Text = ($Var1 -Replace "[^0-9A-Z]", " ")
-  $Out = ((Get-Culture).TextInfo.ToTitleCase($Text) -Replace " ")
-  return $Out;
+  $Data2 = $Data.PsObject.Copy()
+  $Data.Keys | ForEach-Object {
+    $OldKey = $_.ToString();
+    $SavedValue = $Data2[$_];
+    if ($OldKey -match "^[a-zA-Z]+(_[a-zA-Z]+)*") {
+      $NewKey1 = ($OldKey -Replace "[^0-9A-Z]", " ")
+      $NewKey2 = ((Get-Culture).TextInfo.ToTitleCase($NewKey1) -Replace " ")
+      $Data2.Remove($OldKey)
+      $Data2.Add($NewKey2, $SavedValue)
+    }
+  }
+  return $Data2 | ConvertTo-Yaml;
 }
 
 foreach ($plugin in $pluginList) {
@@ -38,7 +47,7 @@ foreach ($plugin in $pluginList) {
   $branch = $plugin.branch
   $pluginName = $plugin.pluginName
   $configFolder = $plugin.configFolder
-  
+
   Write-Host $pluginName
 
   # Fetch the release data from the Gibhub API
@@ -58,9 +67,11 @@ foreach ($plugin in $pluginList) {
   $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json" -SkipHttpErrorCheck -ErrorAction Continue)
   if ($null -ne $configData -and $configData.BaseResponse.StatusCode -ne 404) {
     $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
-  } else {
+  }
+  else {
     $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
-    $config = (ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF') | ConvertFrom-Yaml)
+    Write-Host ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF')
+    $config = (ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml))
   }
 
   # Ensure that config is converted properly.
@@ -68,7 +79,7 @@ foreach ($plugin in $pluginList) {
     Write-Error "Config for plugin $($plugin) is null!"
     Exit-WithCode -Code 1
   }
-  
+
   if ($null -eq ($config | Get-Member -Name "DalamudApiLevel")) {
     $config | Add-Member -Name "DalamudApiLevel" -MemberType NoteProperty -Value $DalamudApiLevel
   }
