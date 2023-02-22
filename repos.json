@@ -19,5 +19,12 @@
     "repo": "Dalamud-HousingTimeoutReminder",
     "branch": "main",
     "configFolder": "HousingTimeoutReminder"
+  },
+  {
+    "username": "thakyZ",
+    "pluginName": "BetterMinionRoulette",
+    "repo": "BetterMinionRoulette-Dalamud",
+    "branch": "main",
+    "configFolder": "BetterMinionRoulette"
   }
 ]
