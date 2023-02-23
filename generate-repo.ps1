@@ -70,7 +70,6 @@ foreach ($plugin in $pluginList) {
   }
   else {
     $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
-    Write-Host ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF')
     $config = (ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml))
   }
 
