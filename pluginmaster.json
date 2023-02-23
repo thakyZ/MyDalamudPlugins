@@ -1,5 +1,27 @@
 [
-  "ApplicableVersion: any\r\nName: Emote Command Complex\r\nAuthor: Neko Boi Nick\r\nDescription: |-\r\n  This plugin adds a command so that you can have more complex custom emotes.\r\n  Such as if you want to have one macro do an emote on a targeting and non-targeting basis.\r\nPunchline: Complex custom emotes now with targets!\r\nChangelog: Refactored Code.\r\nRepoUrl: https://github.com/thakyZ/EmoteCmdComplex-dalamud\r\nInternalName: EmoteCmdComplex\r\nTags:\r\n- Social\r\nDalamudApiLevel: 8\r\nIconUrl: https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png\r\n",
+  {
+    "Changelog": "Refactored Code.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "DalamudApiLevel": 8,
+    "Punchline": "Complex custom emotes now with targets!",
+    "ApplicableVersion": "any",
+    "InternalName": "EmoteCmdComplex",
+    "Name": "Emote Command Complex",
+    "Tags": [
+      "Social"
+    ],
+    "Author": "Neko Boi Nick",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.2.6",
+    "LastUpdated": 1677107020,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip"
+  },
   {
     "Author": "akira0245",
     "Name": "Reset Enmity Command",
@@ -26,6 +48,51 @@
     "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.7/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
-  "ApplicableVersion: any\r\nName: Housing Timeout Reminder\r\nAuthor: Neko Boi Nick\r\nDescription: A plugin to remind you about your house on FFXIV just incase you forgot to visit it.\r\nPunchline: Remind you to visit your house just incase you forgot.\r\nChangelog: Refactored Code.\r\nRepoUrl: https://github.com/thakyZ/Dalamud-HousingTimeoutReminder\r\nInternalName: HousingTimeoutReminder\r\nTags:\r\n- Utility\r\nDalamudApiLevel: 8\r\nIconUrl: https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png\r\n",
-  "ApplicableVersion: any\r\nName: Better Minion Roulette\r\nAuthor: Neko Boi Nick\r\nDescription: |-\r\n  Allows any number of mounts to be enabled for the mount roulette, instead of having to choose between the\r\n  \"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\r\n  island sanctuary minions from being spawned.\r\nPunchline: Choose which minions show up in the minions roulette.\r\nChangelog: Initial release\r\nRepoUrl: https://github.com/thakyZ/BetterMinionRoulette-Dalamud\r\nInternalName: BetterMinionRoulette\r\nTags:\r\n- Minion\r\n- Utility\r\nDalamudApiLevel: 8\r\nIconUrl: https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png\r\n"
+  {
+    "Changelog": "Refactored Code.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "DalamudApiLevel": 8,
+    "Punchline": "Remind you to visit your house just incase you forgot.",
+    "ApplicableVersion": "any",
+    "InternalName": "HousingTimeoutReminder",
+    "Name": "Housing Timeout Reminder",
+    "Tags": [
+      "Utility"
+    ],
+    "Author": "Neko Boi Nick",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
+    "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.1.8",
+    "LastUpdated": 1677099353,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.8/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.8/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.1.8/latest.zip"
+  },
+  {
+    "Changelog": "Initial release",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "DalamudApiLevel": 8,
+    "Punchline": "Choose which minions show up in the minions roulette.",
+    "ApplicableVersion": "any",
+    "InternalName": "BetterMinionRoulette",
+    "Name": "Better Minion Roulette",
+    "Tags": [
+      "Minion",
+      "Utility"
+    ],
+    "Author": "Neko Boi Nick",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "Description": "Allows any number of mounts to be enabled for the mount roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "AssemblyVersion": "1.0.0.1",
+    "LastUpdated": 1677101867,
+    "DownloadCount": 0,
+    "DownloadLinkInstall": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud/releases/download/1.0.0.1/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud/releases/download/1.0.0.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud/releases/download/1.0.0.1/latest.zip"
+  }
 ]
