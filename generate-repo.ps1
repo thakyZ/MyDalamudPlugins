@@ -23,10 +23,10 @@ if ($null -eq $env:PAM) {
 
 function ConvertTo-PascalCase {
   param(
-    [System.Object]
+    [System.Collections.Hashtable]
     $Data
   )
-  $Data2 = $Data.PsObject.Copy()
+  $Data2 = $Data.PSObject.Copy()
   $Data.Keys | ForEach-Object {
     $OldKey = $_.ToString();
     $SavedValue = $Data2[$_];
@@ -70,7 +70,7 @@ foreach ($plugin in $pluginList) {
   }
   else {
     $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
-    $config = (ConvertTo-PascalCase -String ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml))
+    $config = (ConvertTo-PascalCase -Data ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml))
   }
 
   # Ensure that config is converted properly.
