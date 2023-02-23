@@ -37,7 +37,7 @@ function ConvertTo-PascalCase {
       $Data2.Add($NewKey2, $SavedValue)
     }
   }
-  return $Data2 | ConvertTo-Yaml;
+  return $Data2;
 }
 
 foreach ($plugin in $pluginList) {
