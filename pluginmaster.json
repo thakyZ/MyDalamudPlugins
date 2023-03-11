@@ -1,15 +1,15 @@
 [
   {
-    "Author": "Neko Boi Nick",
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "Punchline": "Complex custom emotes now with targets!",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "DalamudApiLevel": 8,
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-    "Name": "Emote Command Complex",
-    "Changelog": "Refactored Code.",
-    "ApplicableVersion": "any",
     "InternalName": "EmoteCmdComplex",
+    "Name": "Emote Command Complex",
+    "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "Changelog": "Refactored Code.",
+    "Punchline": "Complex custom emotes now with targets!",
+    "ApplicableVersion": "any",
+    "Author": "Neko Boi Nick",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
     "Tags": [
       "Social"
     ],
@@ -49,16 +49,16 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
   {
-    "Author": "Neko Boi Nick",
-    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
-    "Punchline": "Remind you to visit your house just incase you forgot.",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
-    "DalamudApiLevel": 8,
-    "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
-    "Name": "Housing Timeout Reminder",
-    "Changelog": "Refactored Code.",
-    "ApplicableVersion": "any",
     "InternalName": "HousingTimeoutReminder",
+    "Name": "Housing Timeout Reminder",
+    "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
+    "Changelog": "Refactored Code.",
+    "Punchline": "Remind you to visit your house just incase you forgot.",
+    "ApplicableVersion": "any",
+    "Author": "Neko Boi Nick",
+    "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
     "Tags": [
       "Utility"
     ],
@@ -72,16 +72,16 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.2.0/latest.zip"
   },
   {
-    "Author": "Neko Boi Nick",
-    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
-    "Punchline": "Choose which minions show up in the minions roulette.",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
-    "DalamudApiLevel": 8,
-    "Description": "Allows any number of mounts to be enabled for the mount roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
-    "Name": "Better Minion Roulette",
-    "Changelog": "Initial release",
-    "ApplicableVersion": "any",
     "InternalName": "BetterMinionRoulette",
+    "Name": "Better Minion Roulette",
+    "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "Changelog": "Initial release",
+    "Punchline": "Choose which minions show up in the minions roulette.",
+    "ApplicableVersion": "any",
+    "Author": "Neko Boi Nick",
+    "Description": "Allows any number of mounts to be enabled for the mount roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
     "Tags": [
       "Minion",
       "Utility"
