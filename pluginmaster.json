@@ -1,23 +1,23 @@
 [
   {
-    "Changelog": "Refactored Code.",
+    "Author": "Neko Boi Nick",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "Punchline": "Complex custom emotes now with targets!",
     "Tags": [
       "Social"
     ],
-    "DalamudApiLevel": 8,
-    "InternalName": "EmoteCmdComplex",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "Name": "Emote Command Complex",
     "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-    "Author": "Neko Boi Nick",
+    "Changelog": "Refactored Code.",
+    "InternalName": "EmoteCmdComplex",
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "Punchline": "Complex custom emotes now with targets!",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.6",
     "LastUpdated": 1677107020,
-    "DownloadCount": 12,
+    "DownloadCount": 14,
     "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip",
     "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/1.0.2.6/latest.zip"
@@ -49,18 +49,18 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
   {
-    "Changelog": "Refactored Code.",
+    "Author": "Neko Boi Nick",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "Punchline": "Remind you to visit your house just incase you forgot.",
     "Tags": [
       "Utility"
     ],
-    "DalamudApiLevel": 8,
-    "InternalName": "HousingTimeoutReminder",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
     "Name": "Housing Timeout Reminder",
     "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
-    "Author": "Neko Boi Nick",
+    "Changelog": "Refactored Code.",
+    "InternalName": "HousingTimeoutReminder",
     "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
-    "Punchline": "Remind you to visit your house just incase you forgot.",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -72,19 +72,19 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder/releases/download/1.0.2.0/latest.zip"
   },
   {
-    "Changelog": "Initial release",
+    "Author": "Neko Boi Nick",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "Punchline": "Choose which minions show up in the minions roulette.",
     "Tags": [
       "Minion",
       "Utility"
     ],
-    "DalamudApiLevel": 8,
-    "InternalName": "BetterMinionRoulette",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
     "Name": "Better Minion Roulette",
     "Description": "Allows any number of mounts to be enabled for the mount roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
-    "Author": "Neko Boi Nick",
+    "Changelog": "Initial release",
+    "InternalName": "BetterMinionRoulette",
     "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
-    "Punchline": "Choose which minions show up in the minions roulette.",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
