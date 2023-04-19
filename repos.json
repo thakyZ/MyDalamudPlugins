@@ -2,28 +2,28 @@
   {
     "username": "thakyZ",
     "pluginName": "EmoteCmdComplex",
-    "repo": "EmoteCmdComplex-dalamud",
+    "repo": "EmoteCmdComplex",
     "branch": "main",
     "configFolder": "EmoteCmdComplex"
   },
   {
     "username": "thakyZ",
     "pluginName": "ResetEnmityCommand",
-    "repo": "Dalamud-ResetEnmityCommand",
-    "branch": "master",
+    "repo": "ResetEnmityCommand",
+    "branch": "main",
     "configFolder": ""
   },
   {
     "username": "thakyZ",
     "pluginName": "HousingTimeoutReminder",
-    "repo": "Dalamud-HousingTimeoutReminder",
+    "repo": "HousingTimeoutReminder",
     "branch": "main",
     "configFolder": "HousingTimeoutReminder"
   },
   {
     "username": "thakyZ",
     "pluginName": "BetterMinionRoulette",
-    "repo": "BetterMinionRoulette-Dalamud",
+    "repo": "BetterMinionRoulette",
     "branch": "main",
     "configFolder": "BetterMinionRoulette"
   }
