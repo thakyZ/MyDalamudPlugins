@@ -1,16 +1,16 @@
 [
   {
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
     "Author": "Neko Boi Nick",
-    "InternalName": "EmoteCmdComplex",
-    "Punchline": "Complex custom emotes now with targets!",
-    "DalamudApiLevel": 8,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "Tags": [
       "Social"
     ],
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "InternalName": "EmoteCmdComplex",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Punchline": "Complex custom emotes now with targets!",
     "Name": "Emote Command Complex",
     "Changelog": "Refactored Code.",
     "IsHide": "False",
@@ -49,17 +49,17 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
   {
-    "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
     "Author": "Neko Boi Nick",
-    "InternalName": "HousingTimeoutReminder",
-    "Punchline": "Remind you to visit your house just incase you forgot.",
-    "DalamudApiLevel": 8,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
     "Tags": [
       "Utility"
     ],
-    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "InternalName": "HousingTimeoutReminder",
+    "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
+    "Punchline": "Remind you to visit your house just incase you forgot.",
     "Name": "Housing Timeout Reminder",
     "Changelog": "Refactored Code.",
     "IsHide": "False",
@@ -72,18 +72,18 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.0/latest.zip"
   },
   {
-    "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
     "Author": "Neko Boi Nick",
-    "InternalName": "BetterMinionRoulette",
-    "Punchline": "Choose which minions show up in the minions roulette.",
-    "DalamudApiLevel": 8,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
     "Tags": [
       "Minion",
       "Utility"
     ],
-    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "DalamudApiLevel": 8,
     "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "InternalName": "BetterMinionRoulette",
+    "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "Punchline": "Choose which minions show up in the minions roulette.",
     "Name": "Better Minion Roulette",
     "Changelog": "Initial release",
     "IsHide": "False",
