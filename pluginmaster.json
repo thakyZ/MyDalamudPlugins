@@ -1,17 +1,17 @@
 [
   {
-    "Author": "Neko Boi Nick",
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
     "DalamudApiLevel": 8,
-    "Name": "Emote Command Complex",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "Changelog": "Refactored Code.",
-    "ApplicableVersion": "any",
-    "InternalName": "EmoteCmdComplex",
+    "Author": "Neko Boi Nick",
     "Punchline": "Complex custom emotes now with targets!",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "InternalName": "EmoteCmdComplex",
     "Tags": [
       "Social"
     ],
+    "Changelog": "Refactored Code.",
+    "ApplicableVersion": "any",
+    "Name": "Emote Command Complex",
     "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -49,18 +49,18 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
   {
-    "Author": "Neko Boi Nick",
     "RepoUrl": "https://github.com/thakyZ/Dalamud-HousingTimeoutReminder",
     "DalamudApiLevel": 8,
-    "Name": "Housing Timeout Reminder",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
-    "Changelog": "Refactored Code.",
-    "ApplicableVersion": "any",
-    "InternalName": "HousingTimeoutReminder",
+    "Author": "Neko Boi Nick",
     "Punchline": "Remind you to visit your house just incase you forgot.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "InternalName": "HousingTimeoutReminder",
     "Tags": [
       "Utility"
     ],
+    "Changelog": "Refactored Code.",
+    "ApplicableVersion": "any",
+    "Name": "Housing Timeout Reminder",
     "Description": "A plugin to remind you about your house on FFXIV just incase you forgot to visit it.",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -72,19 +72,19 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.0/latest.zip"
   },
   {
-    "Author": "Neko Boi Nick",
     "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
     "DalamudApiLevel": 8,
-    "Name": "Better Minion Roulette",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
-    "Changelog": "Updated to Dalamud 7.6.3.0",
-    "ApplicableVersion": "any",
-    "InternalName": "BetterMinionRoulette",
+    "Author": "Neko Boi Nick",
     "Punchline": "Choose which minions show up in the minions roulette.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "InternalName": "BetterMinionRoulette",
     "Tags": [
       "Minion",
       "Utility"
     ],
+    "Changelog": "Updated to Dalamud 7.6.3.0",
+    "ApplicableVersion": "any",
+    "Name": "Better Minion Roulette",
     "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
     "IsHide": "False",
     "IsTestingExclusive": "False",
