@@ -1,17 +1,17 @@
 [
   {
     "DalamudApiLevel": 8,
-    "ApplicableVersion": "any",
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "Author": "Neko Boi Nick",
     "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Name": "Emote Command Complex",
     "InternalName": "EmoteCmdComplex",
     "Tags": [
       "Social"
     ],
     "Changelog": "Refactored Code.",
     "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "Author": "Neko Boi Nick",
-    "Name": "Emote Command Complex",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
     "Punchline": "Complex custom emotes now with targets!",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -50,17 +50,17 @@
   },
   {
     "DalamudApiLevel": 8,
-    "ApplicableVersion": "any",
-    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
+    "Author": "Neko Boi Nick",
     "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
+    "Name": "Housing Timeout Reminder",
     "InternalName": "HousingTimeoutReminder",
     "Tags": [
       "Utility"
     ],
     "Changelog": "Fixed uncaught exception when saving.",
     "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
-    "Author": "Neko Boi Nick",
-    "Name": "Housing Timeout Reminder",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
     "Punchline": "Remind you to visit your house just in case you forgot.",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -73,9 +73,9 @@
   },
   {
     "DalamudApiLevel": 8,
-    "ApplicableVersion": "any",
-    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "Author": "Neko Boi Nick",
     "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "Name": "Better Minion Roulette",
     "InternalName": "BetterMinionRoulette",
     "Tags": [
       "Minion",
@@ -83,8 +83,8 @@
     ],
     "Changelog": "Updated to Dalamud 7.6.3.0",
     "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
-    "Author": "Neko Boi Nick",
-    "Name": "Better Minion Roulette",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
     "Punchline": "Choose which minions show up in the minions roulette.",
     "IsHide": "False",
     "IsTestingExclusive": "False",
