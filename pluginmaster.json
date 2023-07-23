@@ -1,17 +1,17 @@
 [
   {
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Changelog": "Refactored Code.",
     "Punchline": "Complex custom emotes now with targets!",
     "DalamudApiLevel": 8,
-    "Changelog": "Refactored Code.",
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-    "ApplicableVersion": "any",
     "Author": "Neko Boi Nick",
     "Name": "Emote Command Complex",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
     "Tags": [
       "Social"
     ],
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "ApplicableVersion": "any",
     "InternalName": "EmoteCmdComplex",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -49,18 +49,18 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
   },
   {
-    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
+    "Changelog": "Fixed uncaught exception when saving.",
     "Punchline": "Remind you to visit your house just in case you forgot.",
     "DalamudApiLevel": 8,
-    "Changelog": "Fixed uncaught exception when saving.",
-    "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
-    "ApplicableVersion": "any",
     "Author": "Neko Boi Nick",
     "Name": "Housing Timeout Reminder",
+    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
     "Tags": [
       "Utility"
     ],
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "ApplicableVersion": "any",
     "InternalName": "HousingTimeoutReminder",
     "IsHide": "False",
     "IsTestingExclusive": "False",
@@ -72,19 +72,19 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.0/latest.zip"
   },
   {
-    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "Changelog": "Updated to Dalamud 7.6.3.0",
     "Punchline": "Choose which minions show up in the minions roulette.",
     "DalamudApiLevel": 8,
-    "Changelog": "Updated to Dalamud 7.6.3.0",
-    "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
-    "ApplicableVersion": "any",
     "Author": "Neko Boi Nick",
     "Name": "Better Minion Roulette",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
     "Tags": [
       "Minion",
       "Utility"
     ],
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "ApplicableVersion": "any",
     "InternalName": "BetterMinionRoulette",
     "IsHide": "False",
     "IsTestingExclusive": "False",
