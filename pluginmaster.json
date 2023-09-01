@@ -1,18 +1,18 @@
 [
   {
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "ApplicableVersion": "any",
-    "InternalName": "EmoteCmdComplex",
-    "Punchline": "Complex custom emotes now with targets!",
-    "Author": "Neko Boi Nick",
-    "Name": "Emote Command Complex",
     "Tags": [
       "Social"
     ],
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Punchline": "Complex custom emotes now with targets!",
     "DalamudApiLevel": 8,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "Changelog": "Refactored Code.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "Author": "Neko Boi Nick",
+    "InternalName": "EmoteCmdComplex",
+    "ApplicableVersion": "any",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Name": "Emote Command Complex",
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.6",
@@ -53,7 +53,7 @@
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.0.6",
     "LastUpdated": 1693235973,
-    "DownloadCount": 4,
+    "DownloadCount": 0,
     "DownloadLinkInstall": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip",
     "DownloadLinkTesting": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip"
