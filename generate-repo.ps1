@@ -5,6 +5,10 @@ Param(
   $OnlyCheck = $False
 )
 
+Get-ChildItem $PWD
+
+Get-ChildItem ..
+
 If ($OnlyCheck -eq $True) {
   $Data = (Get-Content -Path "pluginmaster.json" | ConvertFrom-Json);
 
