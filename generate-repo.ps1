@@ -51,25 +51,81 @@ foreach ($plugin in $pluginList) {
   Write-Host $pluginName
 
   # Fetch the release data from the Gibhub API
-  $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)" })
+  $data = $Null;
+
+  Try {
+    $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
+
+    If ($data.StatusCode -ne 200) {
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($data.StatusCode))" -Exception $_.Exception;
+      $data | Out-Host;
+      $data.Content | Out-Host;
+      Exit 1;
+    }
+  } Catch {
+    Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    $data | Out-Host;
+    $data.Content | Out-Host;
+    Exit 1;
+  }
+
   $json = ($data.content | ConvertFrom-Json)
 
   # Get data from the api request.
   $count = $json.assets[0].download_count
   $assembly = $json.tag_name
 
-  $download = $json.assets[0].browser_download_url
+  # $download = $json.assets[0].browser_download_url
+  $download_release = $Null;
+
+  Try {
+    $download_release = (Invoke-WebRequest -Uri "$($json.assets[0].browser_download_url)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($plugin)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
+
+    If ($download_release.StatusCode -ne 200) {
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($download_release.StatusCode))" -Exception $_.Exception;
+      $download_release | Out-Host;
+      $download_release.Content | Out-Host;
+      Exit 1;
+    }
+  } Catch {
+    Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    $download_release | Out-Host;
+    $download_release.Content | Out-Host;
+    Exit 1;
+  }
+
+  $latest_file_data = $null;
+
+  Try {
+    $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($plugin)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
+
+    If ($latest_file_data.StatusCode -ne 200) {
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($latest_file_data.StatusCode))" -Exception $_.Exception;
+      $latest_file_data | Out-Host;
+      $latest_file_data.Content | Out-Host;
+      Exit 1;
+    }
+  } Catch {
+    Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    $latest_file_data | Out-Host;
+    $latest_file_data.Content | Out-Host;
+    Exit 1;
+  }
+
+  $latest_file = ($data.content | ConvertFrom-Json)
+  $download = $latest_file.download_url;
+  
   # Get timestamp for the release.
   $time = [Int](New-TimeSpan -Start (Get-Date "01/01/1970") -End ([DateTime]$json.published_at)).TotalSeconds
 
   # Get the config data from the repo.
   $config = $null;
-  $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json" -SkipHttpErrorCheck -ErrorAction Continue)
+  $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).json" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Continue)
   if ($null -ne $configData -and $configData.BaseResponse.StatusCode -ne 404) {
     $config = ($configData.content -replace '\uFEFF' | ConvertFrom-Json)
   }
   else {
-    $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -SkipHttpErrorCheck -ErrorAction Continue)
+    $configData = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$($username)/$($repo)/$($branch)/$($configFolder)/$($pluginName).yaml" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Continue)
     $config = (ConvertTo-PascalCase -Data ($configData.content -replace '\uFEFF' | ConvertFrom-Yaml))
   }
 
