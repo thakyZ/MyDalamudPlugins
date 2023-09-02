@@ -44,4 +44,7 @@ jobs:
           branch: ${{ steps.extracted_branch.outputs.branch }}
       - name: Run Powershell Script
         shell: pwsh
-        run: .\generate-repo.ps1 -OnlyCheck
+        run: |
+          ls $PWD
+          ls ..
+          .\generate-repo.ps1 -OnlyCheck
