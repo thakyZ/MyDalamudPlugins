@@ -1,3 +1,34 @@
+Param(
+  # Only check if download paths resolve.
+  [Parameter(Mandatory = $False, Position = 0, HelpMessage = "Only check if download paths resolve.")]
+  [switch]
+  $OnlyCheck = $False
+)
+
+If ($OnlyCheck -eq $True) {
+  $Data = (Get-Content -Path "pluginmaster.json" | ConvertFrom-Json);
+
+  ForEach ($Plugin in $Data) {
+    $Check = $Null;
+    Try {
+      $Check = (Invoke-WebRequest -Uri "$($Plugin.DownloadLinkInstall)" -SkipHttpErrorCheck -ErrorAction Stop)
+
+      If ($Check.StatusCode -ne 200 -and $Check.StatusCode -ne 404) {
+        Write-Error -Message "Failed to find download uri at $($Plugin.DownloadLinkInstall) ($($Check.StatusCode))";
+        Exit 1;
+      } ElseIf ($Check.StatusCode -eq 404) {
+        Write-Error -Message "Failed to download at uri $($Plugin.DownloadLinkInstall) ($($Check.StatusCode))";
+        Exit 1;
+      }
+    } Catch {
+      Write-Error -Message "Failed to download at uri $($Plugin.DownloadLinkInstall) ($($Check.StatusCode)) $($_.Exception.Message)" -Exception $_.Exception;
+      Exit 1;
+    }
+  }
+
+  Exit 0;
+}
+
 Import-Module -Name "powershell-yaml"
 
 $pluginsOut = @()
@@ -57,15 +88,11 @@ foreach ($plugin in $pluginList) {
     $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
 
     If ($data.StatusCode -ne 200) {
-      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($data.StatusCode))" -Exception $_.Exception;
-      $data | Out-Host;
-      $data.Content | Out-Host;
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($data.StatusCode))";
       Exit 1;
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
-    $data | Out-Host;
-    $data.Content | Out-Host;
     Exit 1;
   }
 
@@ -82,15 +109,11 @@ foreach ($plugin in $pluginList) {
     $download_release = (Invoke-WebRequest -Uri "$($json.assets[0].browser_download_url)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($pluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
 
     If ($download_release.StatusCode -ne 200) {
-      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($download_release.StatusCode))" -Exception $_.Exception;
-      $download_release | Out-Host;
-      $download_release.Content | Out-Host;
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($download_release.StatusCode))";
       Exit 1;
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
-    $download_release | Out-Host;
-    $download_release.Content | Out-Host;
     Exit 1;
   }
 
@@ -99,18 +122,14 @@ foreach ($plugin in $pluginList) {
   Try {
     $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
 
-    If ($latest_file_data.StatusCode -ne 200) {
-      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($latest_file_data.StatusCode))" -Exception $_.Exception;
-      $latest_file_data | Out-Host;
-      $latest_file_data.Content | Out-Host;
+    If ($latest_file_data.StatusCode -ne 200 -and $latest_file_data.StatusCode -ne 404) {
+      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($latest_file_data.StatusCode))";
       Exit 1;
     } ElseIf ($latest_file_data.StatusCode -eq 404) {
       $latest_file_data.content = "{`"download_url`":`"https://raw.githubusercontent.com/$($username)/MyDalamudPlugins/main/plugins/$($pluginName)/latest.zip`"}";
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
-    $latest_file_data | Out-Host;
-    $latest_file_data.Content | Out-Host;
     Exit 1;
   }
 
