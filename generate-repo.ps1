@@ -88,11 +88,11 @@ foreach ($plugin in $pluginList) {
     $data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/latest" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
 
     If ($data.StatusCode -ne 200) {
-      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($data.StatusCode))";
+      Write-Error -Message "Failed to get release at uri $($json.assets[0].browser_download_url) ($($data.StatusCode))";
       Exit 1;
     }
   } Catch {
-    Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Error -Message "Failed to get release at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
     Exit 1;
   }
 
@@ -123,17 +123,17 @@ foreach ($plugin in $pluginList) {
     $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
 
     If ($latest_file_data.StatusCode -ne 200 -and $latest_file_data.StatusCode -ne 404) {
-      Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($latest_file_data.StatusCode))";
+      Write-Error -Message "Failed to get latest file url at uri https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip ($($latest_file_data.StatusCode))";
       Exit 1;
     } ElseIf ($latest_file_data.StatusCode -eq 404) {
       $latest_file_data.content = "{`"download_url`":`"https://raw.githubusercontent.com/$($username)/MyDalamudPlugins/main/plugins/$($pluginName)/latest.zip`"}";
     }
   } Catch {
-    Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Error -Message "Failed to get latest file url at urihttps://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip $($_.Exception.Message)" -Exception $_.Exception;
     Exit 1;
   }
 
-  $latest_file = ($data.content | ConvertFrom-Json)
+  $latest_file = ($latest_file_data.content | ConvertFrom-Json)
   $download = $latest_file.download_url;
   
   # Get timestamp for the release.
