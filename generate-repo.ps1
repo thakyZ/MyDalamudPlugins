@@ -17,11 +17,12 @@ If ($OnlyCheck -eq $True) {
         Write-Error -Message "Failed to find download uri at $($Plugin.DownloadLinkInstall) ($($Check.StatusCode))";
         Exit 1;
       } ElseIf ($Check.StatusCode -eq 404) {
-        Write-Error -Message "Failed to download at uri $($Plugin.DownloadLinkInstall) ($($Check.StatusCode))";
+        Write-Error -Message "Failed to find download uri at $($Plugin.DownloadLinkInstall) ($($Check.StatusCode))";
         Exit 1;
       }
     } Catch {
-      Write-Error -Message "Failed to download at uri $($Plugin.DownloadLinkInstall) ($($Check.StatusCode)) $($_.Exception.Message)" -Exception $_.Exception;
+      Write-Error -Message "Failed to find download uri at $($Plugin.DownloadLinkInstall) ($($Check.StatusCode)) $($_.Exception.Message)" -Exception $_.Exception;
+      Write-Host -ForegroundColor Red -Object $_.Exception.StackTrace;
       Exit 1;
     }
   }
@@ -93,6 +94,7 @@ foreach ($plugin in $pluginList) {
     }
   } Catch {
     Write-Error -Message "Failed to get release at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Host -ForegroundColor Red -Object $_.Exception.StackTrace;
     Exit 1;
   }
 
@@ -114,6 +116,7 @@ foreach ($plugin in $pluginList) {
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Host -ForegroundColor Red -Object $_.Exception.StackTrace;
     Exit 1;
   }
 
@@ -130,6 +133,7 @@ foreach ($plugin in $pluginList) {
     }
   } Catch {
     Write-Error -Message "Failed to get latest file url at urihttps://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Host -ForegroundColor Red -Object $_.Exception.StackTrace;
     Exit 1;
   }
 
