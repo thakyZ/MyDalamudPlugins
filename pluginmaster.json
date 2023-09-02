@@ -1,18 +1,18 @@
 [
   {
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "Tags": [
       "Social"
     ],
-    "Punchline": "Complex custom emotes now with targets!",
-    "DalamudApiLevel": 8,
     "Changelog": "Refactored Code.",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "Author": "Neko Boi Nick",
-    "InternalName": "EmoteCmdComplex",
-    "ApplicableVersion": "any",
     "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "InternalName": "EmoteCmdComplex",
+    "Punchline": "Complex custom emotes now with targets!",
+    "ApplicableVersion": "any",
     "Name": "Emote Command Complex",
+    "Author": "Neko Boi Nick",
+    "DalamudApiLevel": 8,
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.6",
