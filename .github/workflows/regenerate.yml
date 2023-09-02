@@ -42,3 +42,6 @@ jobs:
         with:
           github_token: ${{ secrets.PAM }}
           branch: ${{ steps.extracted_branch.outputs.branch }}
+      - name: Run Powershell Script
+        shell: pwsh
+        run: .\generate-repo.ps1 -OnlyCheck
