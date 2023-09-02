@@ -79,7 +79,7 @@ foreach ($plugin in $pluginList) {
   $download_release = $Null;
 
   Try {
-    $download_release = (Invoke-WebRequest -Uri "$($json.assets[0].browser_download_url)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($plugin)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
+    $download_release = (Invoke-WebRequest -Uri "$($json.assets[0].browser_download_url)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($pluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
 
     If ($download_release.StatusCode -ne 200) {
       Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($download_release.StatusCode))" -Exception $_.Exception;
@@ -97,13 +97,15 @@ foreach ($plugin in $pluginList) {
   $latest_file_data = $null;
 
   Try {
-    $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($plugin)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
+    $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
 
     If ($latest_file_data.StatusCode -ne 200) {
       Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($latest_file_data.StatusCode))" -Exception $_.Exception;
       $latest_file_data | Out-Host;
       $latest_file_data.Content | Out-Host;
       Exit 1;
+    } ElseIf ($latest_file_data.StatusCode -eq 404) {
+      $latest_file_data.content = "{`"download_url`":`"https://raw.githubusercontent.com/$($username)/MyDalamudPlugins/main/plugins/$($pluginName)/latest.zip`"}";
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
@@ -131,7 +133,7 @@ foreach ($plugin in $pluginList) {
 
   # Ensure that config is converted properly.
   if ($null -eq $config) {
-    Write-Error "Config for plugin $($plugin) is null!"
+    Write-Error "Config for plugin $($pluginName) is null!"
     Exit-WithCode -Code 1
   }
 
