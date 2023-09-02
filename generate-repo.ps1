@@ -5,10 +5,6 @@ Param(
   $OnlyCheck = $False
 )
 
-Get-ChildItem $PWD
-
-Get-ChildItem ..
-
 If ($OnlyCheck -eq $True) {
   $Data = (Get-Content -Path "pluginmaster.json" | ConvertFrom-Json);
 
@@ -83,6 +79,8 @@ foreach ($plugin in $pluginList) {
   $branch = $plugin.branch
   $pluginName = $plugin.pluginName
   $configFolder = $plugin.configFolder
+
+  Get-ChildItem $PWD\plugins\$pluginName
 
   Write-Host $pluginName
 
