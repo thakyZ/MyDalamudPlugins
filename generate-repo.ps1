@@ -104,11 +104,10 @@ foreach ($plugin in $pluginList) {
   $count = $json.assets[0].download_count
   $assembly = $json.tag_name
 
-  # $download = $json.assets[0].browser_download_url
   $download_release = $Null;
 
   Try {
-    $download_release = (Invoke-WebRequest -Uri "$($json.assets[0].browser_download_url)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($pluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
+    $download_release = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/$($repo)/releases/assets/$($json.assets[0].id)" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/octet-stream"; } -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($pluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
 
     If ($download_release.StatusCode -ne 200) {
       Write-Error -Message "Failed to download at uri $($json.assets[0].browser_download_url) ($($download_release.StatusCode))";
@@ -120,7 +119,7 @@ foreach ($plugin in $pluginList) {
     Exit 1;
   }
 
-  $latest_file_data = $null;
+  $latest_file_data = $Null;
 
   Try {
     $latest_file_data = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip" -Headers @{ Authorization = "Bearer $($env:PAM)"; Accept = "application/vnd.github+json"; } -SkipHttpErrorCheck -ErrorAction Stop);
