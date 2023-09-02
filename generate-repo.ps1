@@ -129,10 +129,11 @@ foreach ($plugin in $pluginList) {
       Write-Error -Message "Failed to get latest file url at uri https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip ($($latest_file_data.StatusCode))";
       Exit 1;
     } ElseIf ($latest_file_data.StatusCode -eq 404) {
+      $latest_file_data = @{ content = "" }
       $latest_file_data.content = "{`"download_url`":`"https://raw.githubusercontent.com/$($username)/MyDalamudPlugins/main/plugins/$($pluginName)/latest.zip`"}";
     }
   } Catch {
-    Write-Error -Message "Failed to get latest file url at urihttps://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip $($_.Exception.Message)" -Exception $_.Exception;
+    Write-Error -Message "Failed to get latest file url at uri https://api.github.com/repos/$($username)/MyDalamudPlugins/contents/plugins/$($pluginName)/latest.zip $($_.Exception.Message)" -Exception $_.Exception;
     Write-Host -ForegroundColor Red -Object $_.Exception.StackTrace;
     Exit 1;
   }
