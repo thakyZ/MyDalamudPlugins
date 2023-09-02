@@ -1,26 +1,26 @@
 [
   {
+    "Changelog": "Refactored Code.",
+    "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "InternalName": "EmoteCmdComplex",
     "Name": "Emote Command Complex",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "Punchline": "Complex custom emotes now with targets!",
-    "ApplicableVersion": "any",
-    "Changelog": "Refactored Code.",
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "DalamudApiLevel": 8,
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
     "Author": "Neko Boi Nick",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Punchline": "Complex custom emotes now with targets!",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
     "Tags": [
       "Social"
     ],
+    "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.6",
     "LastUpdated": 1677107020,
-    "DownloadCount": 32,
-    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex/releases/download/1.0.2.6/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex/releases/download/1.0.2.6/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex/releases/download/1.0.2.6/latest.zip"
+    "DownloadCount": 39,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/latest.zip"
   },
   {
     "404": "Not Found",
@@ -29,33 +29,56 @@
     "IsTestingExclusive": "False",
     "AssemblyVersion": "0.0.1.7",
     "LastUpdated": 1693592805,
-    "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/ResetEnmityCommand/releases/download/0.0.1.7/latest.zip"
+    "DownloadCount": 2,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/latest.zip"
   },
   {
-    "404": "Not Found",
+    "Changelog": "Fixed uncaught exception when saving.",
     "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "InternalName": "HousingTimeoutReminder",
+    "Name": "Housing Timeout Reminder",
+    "Author": "Neko Boi Nick",
+    "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
+    "Punchline": "Remind you to visit your house just in case you forgot.",
+    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
+    "Tags": [
+      "Utility"
+    ],
+    "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.2.2",
     "LastUpdated": 1693236062,
-    "DownloadCount": 10,
-    "DownloadLinkInstall": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.2/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.2/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/1.0.2.2/latest.zip"
+    "DownloadCount": 19,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/latest.zip"
   },
   {
-    "404": "Not Found",
+    "Changelog": "Updated to Dalamud 7.6.3.0",
     "DalamudApiLevel": 8,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "InternalName": "BetterMinionRoulette",
+    "Name": "Better Minion Roulette",
+    "Author": "Neko Boi Nick",
+    "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "Punchline": "Choose which minions show up in the minions roulette.",
+    "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
+    "Tags": [
+      "Minion",
+      "Utility"
+    ],
+    "ApplicableVersion": "any",
     "IsHide": "False",
     "IsTestingExclusive": "False",
     "AssemblyVersion": "1.0.0.6",
     "LastUpdated": 1693235973,
     "DownloadCount": 0,
-    "DownloadLinkInstall": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip",
-    "DownloadLinkTesting": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/1.0.0.6/latest.zip"
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/latest.zip"
   }
 ]
