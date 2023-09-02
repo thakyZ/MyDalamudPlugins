@@ -80,8 +80,6 @@ foreach ($plugin in $pluginList) {
   $pluginName = $plugin.pluginName
   $configFolder = $plugin.configFolder
 
-  Get-ChildItem $PWD\plugins\$pluginName
-
   Write-Host $pluginName
 
   # Fetch the release data from the Gibhub API
