@@ -48,7 +48,7 @@ If ($Null -eq $Token) {
 
 $CommonHeaders = @{ Accept = "application/vnd.github+json"; "X-GitHub-Api-Version" = "2022-11-28" };
 $OctetStreamHeaders = $CommonHeaders;
-$OctetStreamHeaders.Accept = "application/octet-stream";
+# $OctetStreamHeaders.Accept = "application/octet-stream";
 
 # Function to Exit with a specific code.
 Function Exit-WithCode {
@@ -214,7 +214,7 @@ ForEach ($Plugin in $PluginList) {
   $DownloadRelease = $Null;
 
   Try {
-    $CommonHeaders["Authentication"] = "Bearer $($Token)"
+    $OctetStreamHeaders.Authentication = "Bearer $($Token)"
     $GetRelease = (Invoke-WebRequest -Uri $Data.assets[0].browser_download_url -Method Get -Headers $CommonHeaders -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($PluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
 
     If ($Null -eq $GetRelease -or (($Null -ne $GetRelease.message -and $GetRelease.message -eq "Not Found") -or ($Null -ne $GetRelease.StatusCode -and $GetRelease.StatusCode -eq 404)))  {
