@@ -214,8 +214,8 @@ ForEach ($Plugin in $PluginList) {
   $DownloadRelease = $Null;
 
   Try {
-    $OctetStreamHeaders["Authentication"] = "Bearer $($Token)"
-    $GetRelease = (Invoke-WebRequest -Uri $Data.assets[0].browser_download_url -Method Get -Headers $OctetStreamHeaders -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($PluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
+    $CommonHeaders["Authentication"] = "Bearer $($Token)"
+    $GetRelease = (Invoke-WebRequest -Uri $Data.assets[0].browser_download_url -Method Get -Headers $CommonHeaders -OutFile (Join-Path -Path $PWD -ChildPath "plugins" -AdditionalChildPath @("$($PluginName)", "latest.zip")) -SkipHttpErrorCheck -ErrorAction Stop -PassThru);
 
     If ($Null -eq $GetRelease -or (($Null -ne $GetRelease.message -and $GetRelease.message -eq "Not Found") -or ($Null -ne $GetRelease.StatusCode -and $GetRelease.StatusCode -eq 404)))  {
       Write-Error -Message "Failed to download at uri $() ($($GetRelease.StatusCode))";
