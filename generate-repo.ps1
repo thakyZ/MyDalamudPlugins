@@ -219,6 +219,8 @@ ForEach ($Plugin in $PluginList) {
     If ($Null -eq $DownloadRelease -or (($Null -ne $DownloadRelease.message -and $DownloadRelease.message -eq "Not Found") -or ($Null -ne $DownloadRelease.StatusCode -and $DownloadRelease.StatusCode -eq 404)))  {
       Write-Error -Message "Failed to download at uri $($Data.assets[0].browser_download_url) ($($DownloadRelease.StatusCode))";
       Exit-WithCode -Code 1
+    } Else {
+      Write-Output $DownloadRelease | Out-Host;
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($Data.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
