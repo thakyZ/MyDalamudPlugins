@@ -221,6 +221,7 @@ ForEach ($Plugin in $PluginList) {
       Exit-WithCode -Code 1
     } Else {
       Write-Host "download_url: $($Data.assets[0].browser_download_url)"
+      Write-Output $GetRelease | Out-Host
     }
   } Catch {
     Write-Error -Message "Failed to download at uri $($Data.assets[0].browser_download_url) $($_.Exception.Message)" -Exception $_.Exception;
