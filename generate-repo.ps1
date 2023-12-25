@@ -6,6 +6,9 @@ Param(
   $OnlyCheck = $False
 )
 
+# cspell:ignore pluginmaster.json
+# cspell:ignoreRegExp \\uFEFF
+
 If ($OnlyCheck -eq $True) {
   $Data = (Get-Content -Path "pluginmaster.json" | ConvertFrom-Json);
 
@@ -35,7 +38,7 @@ Import-Module -Name "powershell-yaml"
 
 $PluginsOut = @()
 
-$DalamudApiLevel = 8;
+$DalamudApiLevel = 9;
 
 $PluginList = Get-Content '.\repos.json' | ConvertFrom-Json;
 
@@ -211,7 +214,7 @@ ForEach ($Plugin in $PluginList) {
   $Count  = $Data.assets[0].download_count
   $Assembly = $Data.tag_name
 
-  $DownloadRelease = $Null;
+  # $DownloadRelease = $Null;
 
   Try {
     $OctetStreamHeaders.Authentication = "Bearer $($Token)"
