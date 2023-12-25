@@ -22,26 +22,6 @@ jobs:
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         id: extract_branch
 
-      - name: Test extract branch
-        shell: bash
-        run: |
-          toTest="${{ steps.extracted_branch.outputs.branch }}"
-
-          if [ "${{ env.DEBUG }}" == "true" ]; then
-            echo "steps.extracted_branch.outputs.branch = \"${toTest}\""
-            echo "steps.extracted_branch.outputs = \"${{ steps.extracted_branch.outputs }}\""
-            echo "steps.extracted_branch = \"${{ steps.extracted_branch }}\""
-            echo "steps = \"${{ steps }}\""
-          fi
-
-          if [ $toTest == "" ] || [ -z $toTest ]; then
-            exit 1;
-          else
-            exit 0;
-          fi
-        env:
-          DEBUG: true
-
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v5.2
         with:
@@ -68,7 +48,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAM }}
-          branch: ${{ steps.extracted_branch.outputs.branch }}
+          branch: ${{ steps.extract_branch.outputs.branch }}
 
       - name: Run Powershell Script
         shell: pwsh
