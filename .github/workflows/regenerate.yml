@@ -5,31 +5,56 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
   repository_dispatch:
+    types: [new-release]
+  push:
     branches:
       - main
-    types: [new-release]
 
 jobs:
   generate:
     name: Generate Repo
     runs-on: windows-2019
     steps:
+      - uses: actions/checkout@v1
+
       - name: Extract branch
         shell: bash
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         id: extract_branch
-      - uses: actions/checkout@v1
+
+      - name: Test extract branch
+        shell: bash
+        run: |
+          toTest="${{ steps.extracted_branch.outputs.branch }}"
+
+          if [ "${{ env.DEBUG }}" == "true" ]; then
+            echo "steps.extracted_branch.outputs.branch = \"${toTest}\""
+            echo "steps.extracted_branch.outputs = \"${{ steps.extracted_branch.outputs }}\""
+            echo "steps.extracted_branch = \"${{ steps.extracted_branch }}\""
+            echo "steps = \"${{ steps }}\""
+          fi
+
+          if [ $toTest == "" ] || [ -z $toTest ]; then
+            exit 1;
+          else
+            exit 0;
+          fi
+        env:
+          DEBUG: true
+
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v5.2
         with:
           modules-to-cache: powershell-yaml
         env:
           PAM: ${{ secrets.PAM }}
+
       - name: Run Powershell Script
         shell: pwsh
         run: .\generate-repo.ps1
         env:
           PAM: ${{ secrets.PAM }}
+
       - name: Commit files
         continue-on-error: true
         run: |
@@ -37,12 +62,14 @@ jobs:
           git config --local user.name "GitHub Action"
           git add plugins
           git commit -m "Regenerate Repo" -a
+
       - name: Push changes
         continue-on-error: true
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAM }}
           branch: ${{ steps.extracted_branch.outputs.branch }}
+
       - name: Run Powershell Script
         shell: pwsh
         run: |
