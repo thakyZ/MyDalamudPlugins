@@ -1,18 +1,18 @@
 [
   {
-    "ApplicableVersion": "any",
-    "Changelog": "Fixed unreadable memory.",
     "DalamudApiLevel": 9,
+    "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "Punchline": "Complex custom emotes now with targets!",
     "InternalName": "EmoteCmdComplex",
-    "Author": "Neko Boi Nick",
     "Name": "Emote Command Complex",
     "Tags": [
       "Social"
     ],
+    "Author": "Neko Boi Nick",
     "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "Changelog": "Fixed unreadable memory.",
+    "Punchline": "Complex custom emotes now with targets!",
     "IsHide": false,
     "IsTestingExclusive": false,
     "AssemblyVersion": "1.0.2.8",
@@ -23,21 +23,21 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/latest.zip"
   },
   {
-    "Changelog": "Fixed Stack Overflow",
-    "Iconurl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
-    "Punchline": "Add a reset striking dummy enmity command.",
-    "Description": "Add a reset striking dummy enmity command.",
+    "Repourl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
     "Internalname": "ResetEnmityCommand",
     "Name": "Reset Enmity Command",
-    "Dalamudapiversion": 9,
-    "Repourl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
-    "Author": "akira0245",
     "Tags": [
       "akira",
       "striking",
       "battle",
       "train"
     ],
+    "Author": "akira0245",
+    "Description": "Add a reset striking dummy enmity command.",
+    "Iconurl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+    "Changelog": "Fixed Stack Overflow",
+    "Dalamudapiversion": 9,
+    "Punchline": "Add a reset striking dummy enmity command.",
     "DalamudApiLevel": 9,
     "IsHide": false,
     "IsTestingExclusive": false,
@@ -49,19 +49,19 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/latest.zip"
   },
   {
-    "ApplicableVersion": "any",
-    "Changelog": "Fixed uncaught exception when saving.",
     "DalamudApiLevel": 9,
+    "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
-    "Punchline": "Remind you to visit your house just in case you forgot.",
     "InternalName": "HousingTimeoutReminder",
-    "Author": "Neko Boi Nick",
     "Name": "Housing Timeout Reminder",
     "Tags": [
       "Utility"
     ],
+    "Author": "Neko Boi Nick",
     "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "Changelog": "Fixed uncaught exception when saving.",
+    "Punchline": "Remind you to visit your house just in case you forgot.",
     "IsHide": false,
     "IsTestingExclusive": false,
     "AssemblyVersion": "1.0.2.4",
@@ -72,20 +72,20 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/latest.zip"
   },
   {
-    "ApplicableVersion": "any",
-    "Changelog": "Updated to Dalamud 7.6.3.0",
     "DalamudApiLevel": 8,
+    "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
-    "Punchline": "Choose which minions show up in the minions roulette.",
     "InternalName": "BetterMinionRoulette",
-    "Author": "Neko Boi Nick",
     "Name": "Better Minion Roulette",
     "Tags": [
       "Minion",
       "Utility"
     ],
+    "Author": "Neko Boi Nick",
     "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "Changelog": "Updated to Dalamud 7.6.3.0",
+    "Punchline": "Choose which minions show up in the minions roulette.",
     "IsHide": false,
     "IsTestingExclusive": false,
     "AssemblyVersion": "1.0.0.6",
