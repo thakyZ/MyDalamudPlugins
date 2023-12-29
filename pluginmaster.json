@@ -1,14 +1,14 @@
 [
   {
-    "ApplicableVersion": "any",
-    "InternalName": "EmoteCmdComplex",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "Author": "Neko Boi Nick",
     "Name": "Emote Command Complex",
+    "Changelog": "Fixed unreadable memory.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
     "DalamudApiLevel": 9,
     "Punchline": "Complex custom emotes now with targets!",
     "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "Author": "Neko Boi Nick",
-    "Changelog": "Fixed unreadable memory.",
+    "InternalName": "EmoteCmdComplex",
+    "ApplicableVersion": "any",
     "Tags": [
       "Social"
     ],
@@ -23,21 +23,21 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/latest.zip"
   },
   {
-    "Internalname": "ResetEnmityCommand",
-    "Description": "Add a reset striking dummy enmity command.",
-    "Iconurl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+    "Author": "akira0245",
+    "Name": "Reset Enmity Command",
+    "Changelog": "Fixed Stack Overflow",
     "Dalamudapiversion": 9,
     "Punchline": "Add a reset striking dummy enmity command.",
+    "Internalname": "ResetEnmityCommand",
+    "Iconurl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
     "Repourl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
-    "Author": "akira0245",
-    "Changelog": "Fixed Stack Overflow",
     "Tags": [
       "akira",
       "striking",
       "battle",
       "train"
     ],
-    "Name": "Reset Enmity Command",
+    "Description": "Add a reset striking dummy enmity command.",
     "DalamudApiLevel": 9,
     "IsHide": false,
     "IsTestingExclusive": false,
@@ -49,15 +49,15 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/latest.zip"
   },
   {
-    "ApplicableVersion": "any",
-    "InternalName": "HousingTimeoutReminder",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "Author": "Neko Boi Nick",
     "Name": "Housing Timeout Reminder",
+    "Changelog": "Fixed uncaught exception when saving.",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
     "DalamudApiLevel": 9,
     "Punchline": "Remind you to visit your house just in case you forgot.",
     "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
-    "Author": "Neko Boi Nick",
-    "Changelog": "Fixed uncaught exception when saving.",
+    "InternalName": "HousingTimeoutReminder",
+    "ApplicableVersion": "any",
     "Tags": [
       "Utility"
     ],
@@ -72,15 +72,15 @@
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/latest.zip"
   },
   {
-    "ApplicableVersion": "any",
-    "InternalName": "BetterMinionRoulette",
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
+    "Author": "Neko Boi Nick",
     "Name": "Better Minion Roulette",
+    "Changelog": "Updated to Dalamud 7.6.3.0",
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/BetterMinionRoulette/images/icon.png",
     "DalamudApiLevel": 8,
     "Punchline": "Choose which minions show up in the minions roulette.",
     "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette-Dalamud",
-    "Author": "Neko Boi Nick",
-    "Changelog": "Updated to Dalamud 7.6.3.0",
+    "InternalName": "BetterMinionRoulette",
+    "ApplicableVersion": "any",
     "Tags": [
       "Minion",
       "Utility"
