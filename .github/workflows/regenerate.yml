@@ -5,10 +5,9 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
   repository_dispatch:
-    types: [new-release]
-  push:
     branches:
       - main
+    types: [new-release]
 
 jobs:
   generate:
