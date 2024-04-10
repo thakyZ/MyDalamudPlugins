@@ -202,6 +202,7 @@ ForEach ($Plugin in $PluginList) {
   If ($Null -eq $Data) {
     Throw "Data content is null"
   } ElseIf ($Null -eq $Data.assets) {
+    Write-Host -NoNewLine -Object "`$Data =`n> ";
     Write-Output $Data | Out-Host;
     Throw "Data content assets is null"
   } ElseIf ($Null -eq $Data.assets[0]) {
