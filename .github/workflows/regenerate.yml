@@ -5,14 +5,12 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
   repository_dispatch:
-    branches:
-      - main
     types: [new-release]
 
 jobs:
   generate:
     name: Generate Repo
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
 
@@ -30,12 +28,20 @@ jobs:
 
       - name: Run Powershell Script
         shell: pwsh
+        if: ${{ github.event.client_payload.passed }}
+        run: .\generate-repo.ps1 -Passed
+        env:
+          PAM: ${{ secrets.PAM }}
+          PLUGIN_INFO: ${{ github.event.client_payload.message }}
+
+      - name: Run Powershell Script
+        shell: pwsh
+        if: ${{ !github.event.client_payload.passed }}
         run: .\generate-repo.ps1
         env:
           PAM: ${{ secrets.PAM }}
 
       - name: Commit files
-        continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -43,7 +49,6 @@ jobs:
           git commit -m "Regenerate Repo" -a
 
       - name: Push changes
-        continue-on-error: true
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAM }}
