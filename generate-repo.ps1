@@ -27,6 +27,8 @@ Begin {
     [System.Boolean]  $IsTestingExclusive = $False;
     [System.Int32]    $LastUpdated = 0;
     [System.Int32]    $LoadRequiredState = 0;
+    [System.Int32]    $LoadPriority = 0;
+    [System.String]   $ApplicableVersion = "any";
     [System.String]   $AssemblyVersion = "1.0.0.0";
     [System.Boolean]  $AcceptsFeedback = $False;
     [System.Boolean]  $LoadSync = $False;
