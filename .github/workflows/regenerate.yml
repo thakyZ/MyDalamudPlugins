@@ -58,3 +58,5 @@ jobs:
         shell: pwsh
         run: |
           .\generate-repo.ps1 -OnlyCheck
+        env:
+          PAM: ${{ secrets.PAM }}
