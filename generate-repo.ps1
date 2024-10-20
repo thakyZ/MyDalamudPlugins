@@ -22,7 +22,7 @@ Begin {
     [System.String]   $Name = "";
     [System.String]   $Punchline = "";
     [System.String]   $InternalName = "";
-    [System.Int32]    $DalamudApiLevel = 8;
+    [System.Int32]    $DalamudApiLevel = 10;
     [System.Boolean]  $IsHide = $False;
     [System.Boolean]  $IsTestingExclusive = $False;
     [System.Int32]    $LastUpdated = 0;
