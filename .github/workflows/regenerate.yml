@@ -11,6 +11,8 @@ jobs:
   generate:
     name: Generate Repo
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v1
 
@@ -49,9 +51,9 @@ jobs:
           git commit -m "Regenerate Repo" -a
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          github_token: ${{ secrets.PAM }}
+          commit_options: '--no-verify --signoff'
           branch: ${{ steps.extract_branch.outputs.branch }}
 
       - name: Run Powershell Script
