@@ -51,7 +51,7 @@ jobs:
           git commit -m "Regenerate Repo" -a
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5.1.0
+        uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           commit_options: '--no-verify --signoff --gpg-sign'
           branch: ${{ steps.extract_branch.outputs.branch }}
