@@ -1,11 +1,11 @@
 [
   {
     "Author": "akira0245",
-    "Name": "Reset Enmity Command 2",
+    "Name": "Reset Enmity Command",
     "Punchline": "Add a reset striking dummy enmity command.",
     "Description": "Add a reset striking dummy enmity command.",
     "Changelog": "Fixed Stack Overflow",
-    "InternalName": "ResetEnmityCommand2",
+    "InternalName": "ResetEnmityCommand",
     "AssemblyVersion": "0.0.1",
     "RepoUrl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
     "ApplicableVersion": "any",
@@ -23,14 +23,14 @@
     "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746562834"
+    "LastUpdate": "1746563214"
   },
   {
     "Author": "Neko Boi Nick",
-    "Name": "Better Minion Roulette 2",
+    "Name": "Better Minion Roulette",
     "Punchline": "Choose which minions show up in the minions roulette.",
     "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
-    "InternalName": "BetterMinionRoulette2",
+    "InternalName": "BetterMinionRoulette",
     "AssemblyVersion": "1.0.0",
     "RepoUrl": "https://github.com/thakyZ/BetterMinionRoulette",
     "ApplicableVersion": "any",
@@ -46,15 +46,15 @@
     "DownloadLinkTesting": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/v1.0.0/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/v1.0.0/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746562834"
+    "LastUpdate": "1746563214"
   },
   {
     "Author": "Neko Boi Nick",
-    "Name": "Housing Timeout Reminder 2",
+    "Name": "Housing Timeout Reminder",
     "Punchline": "Remind you to visit your house just in case you forgot.",
     "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
     "Changelog": "Recompiled for patch 7.2+ and updated for API 12",
-    "InternalName": "HousingTimeoutReminder2",
+    "InternalName": "HousingTimeoutReminder",
     "AssemblyVersion": "1.0.3.4",
     "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
     "ApplicableVersion": "any",
@@ -69,7 +69,7 @@
     "DownloadLinkTesting": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/v1.0.3.4/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/v1.0.3.4/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746562834"
+    "LastUpdate": "1746563214"
   },
   {
     "Author": "Neko Boi Nick",
