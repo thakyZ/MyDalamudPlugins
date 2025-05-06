@@ -27,7 +27,7 @@
     "Name": "Housing Timeout Reminder",
     "Punchline": "Remind you to visit your house just in case you forgot.",
     "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
-    "Changelog": "Recompiled for patch 7.2+ and updated for API 12",
+    "Changelog": "Big update!!! The warning dialog has pages now, and I am happy with the results. If you have any issues please report it to the GitHub.",
     "InternalName": "HousingTimeoutReminder",
     "AssemblyVersion": "1.0.3.4",
     "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
