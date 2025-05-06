@@ -1,5 +1,31 @@
 [
   {
+    "Author": "akira0245",
+    "Name": "Reset Enmity Command",
+    "Punchline": "Add a reset striking dummy enmity command.",
+    "Description": "Add a reset striking dummy enmity command.",
+    "Changelog": "Fixed Stack Overflow",
+    "InternalName": "ResetEnmityCommand",
+    "AssemblyVersion": "0.0.1",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "akira",
+      "striking",
+      "battle",
+      "train"
+    ],
+    "DalamudApiLevel": 11,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "DownloadCount": 0,
+    "LastUpdate": "1746563214"
+  },
+  {
     "Author": "Neko Boi Nick",
     "Name": "Better Minion Roulette",
     "Punchline": "Choose which minions show up in the minions roulette.",
@@ -20,7 +46,30 @@
     "DownloadLinkTesting": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/v1.0.0/latest.zip",
     "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/v1.0.0/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746563237"
+    "LastUpdate": "1746563214"
+  },
+  {
+    "Author": "Neko Boi Nick",
+    "Name": "Housing Timeout Reminder",
+    "Punchline": "Remind you to visit your house just in case you forgot.",
+    "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
+    "Changelog": "Recompiled for patch 7.2+ and updated for API 12",
+    "InternalName": "HousingTimeoutReminder",
+    "AssemblyVersion": "1.0.3.4",
+    "RepoUrl": "https://github.com/thakyZ/HousingTimeoutReminder",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Utility"
+    ],
+    "DalamudApiLevel": 12,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
+    "DownloadLinkInstall": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/v1.0.3.4/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/v1.0.3.4/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/HousingTimeoutReminder/releases/download/v1.0.3.4/latest.zip",
+    "DownloadCount": 0,
+    "LastUpdate": "1746563214"
   },
   {
     "Author": "Neko Boi Nick",
