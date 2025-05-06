@@ -1,64 +1,35 @@
-name: Generate Repo
+name: Regenerate PluginMaster
 
 on:
+  workflow_dispatch:
+  push:
   schedule:
     - cron: '0 */12 * * *'
-  workflow_dispatch:
-  repository_dispatch:
-    types: [new-release]
+
+concurrency: regenerate
 
 jobs:
   generate:
-    name: Generate Repo
-    runs-on: windows-latest
-    permissions:
-      contents: write
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4.2.2
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Extract branch
-        shell: bash
-        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
-        id: extract_branch
-
-      - name: Install and cache PowerShell modules
-        uses: potatoqualitee/psmodulecache@v6.2.1
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          modules-to-cache: powershell-yaml
-        env:
-          PAM: ${{ secrets.PAM }}
+            python-version: '3.12'
+            cache: 'pip'
 
-      - name: Run Powershell Script
-        shell: pwsh
-        if: ${{ github.event.client_payload.passed }}
-        run: .\generate-repo.ps1 -Passed
-        env:
-          PAM: ${{ secrets.PAM }}
-          PLUGIN_INFO: ${{ github.event.client_payload.message }}
-
-      - name: Run Powershell Script
-        shell: pwsh
-        if: ${{ !github.event.client_payload.passed }}
-        run: .\generate-repo.ps1
-        env:
-          PAM: ${{ secrets.PAM }}
-
-      - name: Commit files
+      - name: Generate PluginMaster
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add plugins
-          git commit -m "Regenerate Repo" -a
+          pip install -r requirements.txt
+          python generate_pluginmaster.py
 
-      - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5.2.0
+      - name: Commit PluginMaster
+        uses: EndBug/add-and-commit@v9
         with:
-          commit_options: '--no-verify --signoff --gpg-sign'
-          branch: ${{ steps.extract_branch.outputs.branch }}
-
-      - name: Run Powershell Script
-        shell: pwsh
-        run: |
-          .\generate-repo.ps1 -OnlyCheck
-        env:
-          PAM: ${{ secrets.PAM }}
+          author_name: GitHub Action
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: Regenerate PluginMaster

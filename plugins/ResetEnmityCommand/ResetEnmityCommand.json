@@ -1,0 +1,24 @@
+{
+  "Author": "akira0245",
+  "Name": "Reset Enmity Command 2",
+  "InternalName": "ResetEnmityCommand2",
+  "AssemblyVersion": "0.0.1",
+  "Description": "Add a reset striking dummy enmity command.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
+  "Tags": [
+    "akira",
+    "striking",
+    "battle",
+    "train"
+  ],
+  "DalamudApiLevel": 11,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+  "Punchline": "Add a reset striking dummy enmity command.",
+  "Changelog": "Fixed Stack Overflow",
+  "AcceptsFeedback": true
+}
