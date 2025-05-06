@@ -16,6 +16,6 @@
   "LoadPriority": 0,
   "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/HousingTimeoutReminder/images/icon.png",
   "Punchline": "Remind you to visit your house just in case you forgot.",
-  "Changelog": "Recompiled for patch 7.2+ and updated for API 12",
+  "Changelog": "Big update!!! The warning dialog has pages now, and I am happy with the results. If you have any issues please report it to the GitHub.",
   "AcceptsFeedback": true
 }
