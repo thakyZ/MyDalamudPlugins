@@ -1,7 +1,7 @@
 {
   "Author": "Neko Boi Nick",
-  "Name": "Housing Timeout Reminder 2",
-  "InternalName": "HousingTimeoutReminder2",
+  "Name": "Housing Timeout Reminder",
+  "InternalName": "HousingTimeoutReminder",
   "AssemblyVersion": "1.0.3.4",
   "Description": "A plugin to remind you about your house on FFXIV just in case you forgot to visit it.",
   "ApplicableVersion": "any",

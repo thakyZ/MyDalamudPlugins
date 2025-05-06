@@ -1,7 +1,7 @@
 {
   "Author": "Neko Boi Nick",
-  "Name": "Better Minion Roulette 2",
-  "InternalName": "BetterMinionRoulette2",
+  "Name": "Better Minion Roulette",
+  "InternalName": "BetterMinionRoulette",
   "AssemblyVersion": "1.0.0",
   "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
   "ApplicableVersion": "any",
