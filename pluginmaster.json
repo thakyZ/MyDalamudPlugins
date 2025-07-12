@@ -1,29 +1,26 @@
 [
   {
-    "Author": "akira0245",
-    "Name": "Reset Enmity Command",
-    "Punchline": "Add a reset striking dummy enmity command.",
-    "Description": "Add a reset striking dummy enmity command.",
-    "Changelog": "Fixed Stack Overflow",
-    "InternalName": "ResetEnmityCommand",
-    "AssemblyVersion": "0.0.1",
-    "RepoUrl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
+    "Author": "Neko Boi Nick",
+    "Name": "Emote Command Complex",
+    "Punchline": "Complex custom emotes now with targets!",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Changelog": "Updated to Dalamud API 9",
+    "InternalName": "EmoteCmdComplex",
+    "AssemblyVersion": "1.0.2.8",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
     "ApplicableVersion": "any",
     "Tags": [
-      "akira",
-      "striking",
-      "battle",
-      "train"
+      "Social"
     ],
-    "DalamudApiLevel": 11,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
-    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "DalamudApiLevel": 9,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746563214"
+    "LastUpdate": "1746562834"
   },
   {
     "Author": "Neko Boi Nick",
@@ -49,27 +46,30 @@
     "LastUpdate": "1746563214"
   },
   {
-    "Author": "Neko Boi Nick",
-    "Name": "Emote Command Complex",
-    "Punchline": "Complex custom emotes now with targets!",
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-    "Changelog": "Updated to Dalamud API 9",
-    "InternalName": "EmoteCmdComplex",
-    "AssemblyVersion": "1.0.2.8",
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "Author": "akira0245",
+    "Name": "Reset Enmity Command",
+    "Punchline": "Add a reset striking dummy enmity command.",
+    "Description": "Add a reset striking dummy enmity command.",
+    "Changelog": "Fixed Stack Overflow",
+    "InternalName": "ResetEnmityCommand",
+    "AssemblyVersion": "0.0.1",
+    "RepoUrl": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand",
     "ApplicableVersion": "any",
     "Tags": [
-      "Social"
+      "akira",
+      "striking",
+      "battle",
+      "train"
     ],
-    "DalamudApiLevel": 9,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "DalamudApiLevel": 11,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/ResetEnmityCommand/images/icon.png",
+    "DownloadLinkInstall": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "DownloadLinkTesting": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/Dalamud-ResetEnmityCommand/releases/download/v0.0.1/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": "1746562834"
+    "LastUpdate": "1746563214"
   },
   {
     "Author": "Neko Boi Nick",
