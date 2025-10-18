@@ -50,29 +50,6 @@
   },
   {
     "Author": "Neko Boi Nick",
-    "Name": "Emote Command Complex",
-    "Punchline": "Complex custom emotes now with targets!",
-    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
-    "Changelog": "Updated to Dalamud API 9",
-    "InternalName": "EmoteCmdComplex",
-    "AssemblyVersion": "1.0.2.8",
-    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
-    "ApplicableVersion": "any",
-    "Tags": [
-      "Social"
-    ],
-    "DalamudApiLevel": 9,
-    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
-    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
-    "IsHide": false,
-    "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
-    "DownloadCount": 0,
-    "LastUpdate": "1746562834"
-  },
-  {
-    "Author": "Neko Boi Nick",
     "Name": "Better Minion Roulette",
     "Punchline": "Choose which minions show up in the minions roulette.",
     "Description": "Allows any number of minions to be enabled for the minion roulette, instead of having to choose between the\n\"up to 30\" and \"EVERYTHING\" modes supported by the game. Also has (or will have) an option to omit the\nisland sanctuary minions from being spawned.",
@@ -93,5 +70,28 @@
     "DownloadLinkUpdate": "https://github.com/thakyZ/BetterMinionRoulette/releases/download/v1.0.0/latest.zip",
     "DownloadCount": 0,
     "LastUpdate": "1746563214"
+  },
+  {
+    "Author": "Neko Boi Nick",
+    "Name": "Emote Command Complex",
+    "Punchline": "Complex custom emotes now with targets!",
+    "Description": "This plugin adds a command so that you can have more complex custom emotes.\nSuch as if you want to have one macro do an emote on a targeting and non-targeting basis.",
+    "Changelog": "Updated to Dalamud API 9",
+    "InternalName": "EmoteCmdComplex",
+    "AssemblyVersion": "1.0.2.8",
+    "RepoUrl": "https://github.com/thakyZ/EmoteCmdComplex-dalamud",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Social"
+    ],
+    "DalamudApiLevel": 9,
+    "IconUrl": "https://raw.githubusercontent.com/thakyZ/MyDalamudPlugins/main/plugins/EmoteCmdComplex/images/icon.png",
+    "DownloadLinkInstall": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/thakyZ/EmoteCmdComplex-dalamud/releases/download/v1.0.2.8/latest.zip",
+    "DownloadCount": 0,
+    "LastUpdate": "1746562834"
   }
 ]
